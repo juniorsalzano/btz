@@ -1,0 +1,43 @@
+{
+  "plugins": ["spellcheck"],
+  "rules": {
+    "indent": ["error", 2], // Adiciona a regra de indentação de 2 espaços
+    "spellcheck/spell-checker": [
+      "warn",
+      {
+        "comments": true,
+        "strings": true,
+        "identifiers": true,
+        "lang": "en_US",
+        "skipWords": [
+          "Database",
+          "PDO",
+          "conn",
+          "sql",
+          "stmt",
+          "fetchAll",
+          "fetch",
+          "insert",
+          "update",
+          "delete",
+          "localhost",
+          "dbname",
+          "username",
+          "password",
+          "setAttribute",
+          "ERRMODE",
+          "EXCEPTION",
+          "PDOException"
+        ],
+        "skipIfMatch": [
+          "http://[^s]*",
+          "^[-\\w]+/[-\\w\\.]+$"
+        ],
+        "skipWordIfMatch": [
+          "^foobar.*$"
+        ],
+        "minLength": 3
+      }
+    ]
+  }
+}

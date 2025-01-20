@@ -1,0 +1,37 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "ignorePaths": [
+    "**/node_modules/**",
+    "**/bower_components/**",
+    "**/dist/**",
+    "**/build/**",
+    "**/.vscode/**",
+    "**/.github/**",
+    "**/.git/**"
+  ],
+  "ignoreRegExpList": [
+    "/\\b[A-Za-z]{1,2}\\b/", 
+    "/[\\u00C0-\\u017F]+/" 
+  ],
+  "words": [
+    "ERRMODE",
+    "PDO",
+    "PDOException",
+    "dbname",
+    "username",
+    "password",
+    "setAttribute"
+  ],
+  "overrides": [
+    {
+      "filename": "**/*.php",
+      "ignoreRegExpList": [
+        "/\\/\\*[^*]*\\*+(?:[^/*][^*]*\\*+)*\\//", 
+        "/\\/\\/[^\\n]*/", 
+        "/\"(?:\\\\.|[^\\\\\"])*\"/", 
+        "/'(?:\\\\.|[^\\\\'])*'/" 
+      ]
+    }
+  ]
+}

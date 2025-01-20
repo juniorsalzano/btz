@@ -1,0 +1,21 @@
+{
+  "name": "bkz",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "start": "php -S localhost:8000 -t public",
+    "format": "prettier --write \"**/*.php\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "eslint-plugin-spellcheck": "^0.0.20",
+    "prettier": "^3.4.2"
+  }
+}
