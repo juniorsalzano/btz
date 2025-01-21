@@ -21,7 +21,9 @@
     "dbname",
     "username",
     "password",
-    "setAttribute"
+    "setAttribute",
+    "Authenticated",
+    "welcome",
   ],
   "overrides": [
     {
