@@ -26,7 +26,7 @@ class Auth
    * Desautentica o usuário.
    */
   public static function logout()
-  {
+  { 
     unset($_SESSION['authenticated']);
   }
 
