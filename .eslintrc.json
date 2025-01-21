@@ -1,34 +1,15 @@
 {
-  "plugins": ["spellcheck"],
+  "plugins": ["spellcheck", "html"],
   "rules": {
-    "indent": ["error", 2], // Adiciona a regra de indentação de 2 espaços
+    "indent": ["error", 2],
     "spellcheck/spell-checker": [
       "warn",
       {
         "comments": true,
         "strings": true,
         "identifiers": true,
-        "lang": "en_US",
-        "skipWords": [
-          "Database",
-          "PDO",
-          "conn",
-          "sql",
-          "stmt",
-          "fetchAll",
-          "fetch",
-          "insert",
-          "update",
-          "delete",
-          "localhost",
-          "dbname",
-          "username",
-          "password",
-          "setAttribute",
-          "ERRMODE",
-          "EXCEPTION",
-          "PDOException"
-        ],
+        "lang": "pt_BR",
+        "skipWords": [],
         "skipIfMatch": [
           "http://[^s]*",
           "^[-\\w]+/[-\\w\\.]+$"
@@ -38,6 +19,18 @@
         ],
         "minLength": 3
       }
-    ]
+    ],
+    "html/indent": ["error", 2],
+    "html/report-bad-indent": "error",
+    "no-unused-vars": "off",
+    "no-undef": "off"
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:html/recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 12,
+    "sourceType": "module"
   }
 }

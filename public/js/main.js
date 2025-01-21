@@ -4,19 +4,12 @@ document.addEventListener('DOMContentLoaded', function() {
   loadingOverlay.innerHTML = '<div class="spinner"></div>';
   document.body.appendChild(loadingOverlay);
 
-  let loadingStartTime;
-
   function showLoading() {
-    loadingStartTime = Date.now();
     loadingOverlay.style.display = 'flex';
   }
 
   function hideLoading() {
-    const elapsedTime = Date.now() - loadingStartTime;
-    const remainingTime = 3000 - elapsedTime; // 3000ms = 3 seconds
-    setTimeout(() => {
-      loadingOverlay.style.display = 'none';
-    }, remainingTime > 0 ? remainingTime : 0);
+    loadingOverlay.style.display = 'none';
   }
 
   document.querySelectorAll('form').forEach(form => {
@@ -26,5 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   window.addEventListener('beforeunload', showLoading);
+  window.addEventListener('pageshow', hideLoading);
   window.addEventListener('load', hideLoading);
 });
