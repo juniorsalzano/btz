@@ -31,4 +31,10 @@ class UserController
 
     require_once __DIR__ . '/../../src/views/register.php';
   }
+
+  public function getUserByEmail($email)
+  {
+    $userDAO = new UserDAO();
+    return $userDAO->findByEmail($email);
+  }
 }
