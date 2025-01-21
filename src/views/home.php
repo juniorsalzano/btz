@@ -1,5 +1,91 @@
-<?php
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+  
+  <header class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <?php if (isset($_SESSION['user_id'])): ?>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Menu
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/profile">Perfil</a>
+                <a class="dropdown-item" href="/settings">Configurações</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/logout">Logout</a>
+              </div>
+            </li>
+          <?php else: ?>
+            <li class="nav-item">
+              <a class="nav-link" href="/login">Login</a>
+            </li>
+          <?php endif; ?>
+        </ul>
+      </div>
+    </div>
+  </header>
+  
+  <main class="content mt-5 pt-5">
+    <div class="container">
+      <section class="news">
+        <h2 class="text-center mb-4">Mural de Notícias</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img src="/images/news1.jpg" class="card-img-top" alt="Notícia 1">
+              <div class="card-body">
+                <h5 class="card-title">Notícia 1</h5>
+                <p class="card-text">Descrição da notícia 1...</p>
+                <a href="#" class="btn btn-primary">Leia mais</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img src="/images/news2.jpg" class="card-img-top" alt="Notícia 2">
+              <div class="card-body">
+                <h5 class="card-title">Notícia 2</h5>
+                <p class="card-text">Descrição da notícia 2...</p>
+                <a href="#" class="btn btn-primary">Leia mais</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img src="/images/news3.jpg" class="card-img-top" alt="Notícia 3">
+              <div class="card-body">
+                <h5 class="card-title">Notícia 3</h5>
+                <p class="card-text">Descrição da notícia 3...</p>
+                <a href="#" class="btn btn-primary">Leia mais</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
 
-  echo 'home';
+  <footer class="bg-dark text-white text-center py-3">
+    <div class="container">
+      <p>&copy; 2025 Todos os direitos reservados.</p>
+    </div>
+  </footer>
 
-?>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
