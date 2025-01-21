@@ -1,5 +1,5 @@
-create database bkz;
-use bkz;
+create database btz;
+use btz;
 
 CREATE TABLE users (
   id INT AUTO_INCREMENT PRIMARY KEY,
