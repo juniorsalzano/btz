@@ -23,7 +23,7 @@ class AuthController
             Auth::login();
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['user_name'] = $user['name'];
-            header('Location: /');
+            header('Location: /welcome');
             exit;
           } else {
             $error = 'Senha incorreta.';

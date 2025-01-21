@@ -11,5 +11,6 @@ $router->get('/logout', 'AuthController@logout');
 $router->get('/register', 'UserController@register', false);
 $router->post('/register', 'UserController@register', false);
 
-// Adicionar novas rotas para páginas que utilizam o template
+$router->get('/welcome', 'Controller@welcome', true);
+
 $router->get('/edit_user', 'Controller@editUser', true);
