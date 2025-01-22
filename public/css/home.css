@@ -13,7 +13,7 @@ header .navbar-brand {
 }
 
 .intro h2 {
-  color: #003366; /* Azul escuro */
+  color: #003366;
   font-size: 2em;
 }
 
@@ -23,7 +23,7 @@ header .navbar-brand {
 }
 
 .news .card-title {
-  color: #003366; /* Azul escuro */
+  color: #003366;
 }
 
 .content {
@@ -31,7 +31,7 @@ header .navbar-brand {
 }
 
 footer {
-  background-color: #003366; /* Azul escuro */
+  background-color: #003366; 
   color: white;
   text-align: center;
   padding: 20px 0;
