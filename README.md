@@ -32,7 +32,7 @@ cp .env.example .env
 
 4. Configure o arquivo .env com as informações do seu banco de dados MySQL.
 
-5. Execute o script SQL que está na pasta sql para criar as tabelas necessárias no banco de dados.
+5. Execute o script SQL que está na pasta `\btz\sql\` para criar as tabelas necessárias no banco de dados:
 
 6. Aponte o servidor web para a pasta public do projeto.
 
