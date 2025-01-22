@@ -28,8 +28,9 @@ class Router
 
   public function dispatch()
   {
-    $uri = $_SERVER['REQUEST_URI'];
+    $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
     $method = $_SERVER['REQUEST_METHOD'];
+    $queryParams = $_GET;
 
     foreach ($this->routes as $route) {
       if ($route['uri'] === $uri && $route['method'] === $method) {
@@ -40,11 +41,11 @@ class Router
 
         list($controller, $action) = explode('@', $route['controller']);
         $controller = new $controller;
-        $controller->$action();
+        $controller->$action($queryParams);
         return;
       }
     }
-
+    
     http_response_code(404);
     echo '404 Not Found';
   }
