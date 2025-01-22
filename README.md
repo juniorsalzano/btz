@@ -37,9 +37,13 @@ cp .env.example .env
 6. Aponte o servidor web para a pasta public do projeto.
 
 ## Uso
-* Inicie o servidor web apontando para a pasta public.
-* Acesse a aplicação através do navegador.
-* Estrutura do Projeto
+1. Inicie o servidor web apontando para a pasta public.
+2. Acesse a aplicação através do navegador.
+3. Faça login com o usuário administrador:
+  - Email: admin@example.com
+  - Senha: admin
+
+## Estrutura do Projeto
 * src: Contém os arquivos de código-fonte da aplicação.
 * public: Contém os arquivos públicos acessíveis pelo navegador.
 * sql: Contém o script SQL para criação das tabelas no banco de dados.
