@@ -25,6 +25,9 @@
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="/home">Home</a>
                 <a class="dropdown-item" href="/edit_user?id=<?php echo $_SESSION['user_id']; ?>">Perfil</a>
+                <?php if ($_SESSION['user_access_level'] === 'A'): ?>
+                  <a class="dropdown-item" href="/list_users">Listar Usuários</a>
+                <?php endif; ?>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="/logout">Logout</a>
               </div>

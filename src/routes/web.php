@@ -12,5 +12,7 @@ $router->get('/register', 'UserController@register', false);
 $router->post('/register', 'UserController@register', false);
 
 $router->get('/welcome', 'Controller@welcome', true); 
+
 $router->get('/edit_user', 'Controller@editUser', true);
-$router->post('/update_user', 'Controller@updateUser', true);
+$router->post('/update_user', 'Controller@updateUser', true); 
+$router->get('/list_users', 'Controller@listUsers', true); 
