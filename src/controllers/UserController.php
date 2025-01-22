@@ -16,11 +16,22 @@ class UserController
       $neighborhood = $_POST['neighborhood'];
       $city = $_POST['city'];
       $state = $_POST['state'];
+      $access_level = 'U';
 
-      $user = new User($name, $email, $password, $zip_code, $address, $neighborhood, $city, $state);
-      
+      $user = new User(
+        $name,
+        $email,
+        $password,
+        $zip_code,
+        $address,
+        $neighborhood,
+        $city,
+        $state,
+        $access_level
+      );
+
       $userDAO = new UserDAO();
-      
+
       if ($userDAO->create($user)) {
         header('Location: /login');
         exit;

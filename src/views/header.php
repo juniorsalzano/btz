@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/home.css">
 </head>
+
 <body>
   <header class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
@@ -21,8 +23,8 @@
                 Menu
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="/profile">Perfil</a>
-                <a class="dropdown-item" href="/settings">Configurações</a>
+                <a class="dropdown-item" href="/home">Home</a>
+                <a class="dropdown-item" href="/edit_user?id=<?php echo $_SESSION['user_id']; ?>">Perfil</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="/logout">Logout</a>
               </div>

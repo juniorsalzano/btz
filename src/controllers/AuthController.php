@@ -23,6 +23,7 @@ class AuthController
             Auth::login();
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['user_name'] = $user['name'];
+            $_SESSION['user_access_level'] = $user['access_level']; // Definir o nível de acesso na sessão
             header('Location: /welcome');
             exit;
           } else {
@@ -44,4 +45,3 @@ class AuthController
     exit;
   }
 }
-?>

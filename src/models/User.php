@@ -13,8 +13,9 @@ class User
   public $state;
   public $created_at;
   public $updated_at;
+  public $access_level;
 
-  public function __construct($name, $email, $password, $zip_code, $address, $neighborhood, $city, $state)
+  public function __construct($name, $email, $password, $zip_code, $address, $neighborhood, $city, $state, $access_level)
   {
     $this->name = $name;
     $this->email = $email;
@@ -24,5 +25,6 @@ class User
     $this->neighborhood = $neighborhood;
     $this->city = $city;
     $this->state = $state;
+    $this->access_level = $access_level;
   }
 }
