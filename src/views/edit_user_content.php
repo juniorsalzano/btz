@@ -3,6 +3,11 @@ if (isset($params['user'])) {
   $user = $params['user'];
   $isAdmin = isset($_SESSION['user_access_level']) && $_SESSION['user_access_level'] === 'A'; // Verificar se o usuário logado é um administrador
 ?>
+  <?php if (isset($_GET['message'])): ?>
+    <div class="alert alert-info">
+      <?php echo htmlspecialchars($_GET['message']); ?>
+    </div>
+  <?php endif; ?>
   <form action="/update_user?id=<?php echo $user['id']; ?>" method="post">
     <input type="hidden" name="id" value="<?php echo $user['id']; ?>">
     <div class="form-group">
@@ -46,6 +51,7 @@ if (isset($params['user'])) {
       <?php endif; ?>
     </div>
     <button type="submit" class="btn btn-primary">Atualizar</button>
+    <a href="/list_users" class="btn btn-secondary">Voltar</a>
   </form>
   <script src="/js/cep.js"></script>
 <?php

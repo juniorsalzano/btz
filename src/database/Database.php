@@ -59,7 +59,7 @@ class Database
   /**
    * Obtém a instância única da classe Database.
    * 
-   * @return Database A instância única da classe Database.
+   * @return Database Instância única da classe Database.
    */
   public static function getInstance()
   {
@@ -90,8 +90,8 @@ class Database
   /**
    * Executa uma consulta SQL.
    * 
-   * @param string $sql A consulta SQL a ser executada.
-   * @return PDOStatement A declaração PDO resultante da execução da consulta.
+   * @param string $sql Consulta SQL a ser executada.
+   * @return PDOStatement Declaração PDO resultante da execução da consulta.
    */
   public function query($sql)
   {
@@ -103,8 +103,8 @@ class Database
   /**
    * Obtém todos os resultados de uma consulta.
    * 
-   * @param string $sql A consulta SQL a ser executada.
-   * @return array Um array associativo contendo todos os resultados da consulta.
+   * @param string $sql Consulta SQL a ser executada.
+   * @return array Array associativo contendo todos os resultados da consulta.
    */
   public function fetchAll($sql)
   {
